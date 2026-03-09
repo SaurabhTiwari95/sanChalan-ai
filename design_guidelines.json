@@ -1,0 +1,136 @@
+{
+  "identity": {
+    "persona": "E1: The Anti-AI Designer",
+    "mission": "Create a futuristic, immersive, and secure authentication experience that breaks generic SaaS molds.",
+    "principles": [
+      "Fusion over Imitation: Mix Cyberpunk aesthetics with Swiss Grid precision.",
+      "Emotion First: Evoke 'High-Tech Security' and 'Speed'.",
+      "Content is King: The login flow is the first scene of the movie.",
+      "Negative Space: Use deep black voids to make neon elements pop.",
+      "Contrast: High-contrast text against dark backgrounds for accessibility."
+    ]
+  },
+  "technical_stack": {
+    "framework": "React 19",
+    "styling": "Tailwind CSS",
+    "components": "shadcn/ui (customized)",
+    "icons": "lucide-react",
+    "notifications": "sonner"
+  },
+  "theme_strategy": {
+    "mode": "dark",
+    "rationale": "Futuristic/Cyberpunk themes require dark mode to allow neon accents and glows to function. Light mode is disabled for this specific brand identity.",
+    "background_style": "Deep Void (#050505) with subtle noise texture."
+  },
+  "typography": {
+    "primary_font": "Rajdhani",
+    "secondary_font": "Outfit",
+    "instructions": "Import fonts from Google Fonts. Use Rajdhani for all Headings (H1-H6) to give a technical/squared look. Use Outfit for Body text for high legibility.",
+    "scale": {
+      "h1": "text-5xl md:text-7xl font-bold tracking-tight uppercase",
+      "h2": "text-3xl md:text-4xl font-semibold tracking-wide",
+      "body": "text-base md:text-lg text-muted-foreground",
+      "label": "text-sm font-medium uppercase tracking-widest text-muted-foreground"
+    }
+  },
+  "color_palette": {
+    "primary": {
+      "name": "Neon Cyan",
+      "hex": "#00F0FF",
+      "tailwind": "cyan-400",
+      "usage": "Primary Buttons, Active States, Focus Rings"
+    },
+    "secondary": {
+      "name": "Electric Violet",
+      "hex": "#BD00FF",
+      "tailwind": "purple-500",
+      "usage": "Accents, Gradients, Secondary Links"
+    },
+    "background": {
+      "hex": "#050505",
+      "tailwind": "bg-neutral-950",
+      "usage": "Page Background"
+    },
+    "surface": {
+      "hex": "#121212",
+      "tailwind": "bg-neutral-900/50",
+      "usage": "Cards, Inputs (Glassmorphism)"
+    },
+    "error": {
+      "hex": "#FF003C",
+      "tailwind": "text-red-500",
+      "usage": "Error messages, Destructive actions"
+    },
+    "success": {
+      "hex": "#00FF9D",
+      "tailwind": "text-green-400",
+      "usage": "Success toasts, Validated fields"
+    }
+  },
+  "visual_assets": {
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1771599940657-f9f151abed45?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwyfHxob2xvZ3JhcGhpYyUyMGdlb21ldHJpYyUyMGFic3RyYWN0JTIwc2hhcGUlMjBkYXJrfGVufDB8fHx8MTc3MzA1NTExNXww&ixlib=rb-4.1.0&q=85",
+      "alt": "Abstract Iridescent Glass Torus",
+      "usage": "Right side panel of the split-screen layout. Object of focus."
+    },
+    "background_texture": {
+      "url": "https://images.unsplash.com/photo-1762278804729-13d330fad71a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwxfHxmdXR1cmlzdGljJTIwYWJzdHJhY3QlMjBuZW9uJTIwYmFja2dyb3VuZCUyMGRhcmslMjAzZHxlbnwwfHx8fDE3NzMwNTUxMTN8MA&ixlib=rb-4.1.0&q=85",
+      "alt": "Neon Light Streaks",
+      "usage": "Subtle background overlay for the 'Forgot Password' or 'Reset Password' standalone pages."
+    }
+  },
+  "layout_strategy": {
+    "login_register": {
+      "type": "split_screen",
+      "structure": "grid grid-cols-1 lg:grid-cols-2 h-screen w-full overflow-hidden",
+      "left_panel": "flex flex-col justify-center px-8 md:px-20 lg:px-32 relative z-10 bg-black/40 backdrop-blur-md border-r border-white/5",
+      "right_panel": "relative hidden lg:flex items-center justify-center bg-black overflow-hidden"
+    },
+    "standalone_pages": {
+      "type": "centered_card",
+      "structure": "min-h-screen w-full flex items-center justify-center bg-black relative p-4",
+      "card_style": "w-full max-w-md p-8 bg-neutral-900/60 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl relative z-10 overflow-hidden"
+    }
+  },
+  "component_guidelines": {
+    "buttons": {
+      "primary": "relative group overflow-hidden bg-white text-black font-bold uppercase tracking-widest py-3 px-6 hover:bg-cyan-400 transition-colors duration-300 rounded-none clip-path-cyberpunk",
+      "secondary": "border border-white/20 text-white hover:bg-white/10 hover:border-white/50 uppercase tracking-widest py-3 px-6 transition-all duration-300",
+      "google_oauth": "w-full flex items-center justify-center gap-2 bg-neutral-800 hover:bg-neutral-700 text-white py-3 border border-white/10 transition-all rounded-md"
+    },
+    "inputs": {
+      "style": "bg-transparent border-b border-white/20 focus:border-cyan-400 text-white placeholder:text-neutral-600 focus:outline-none focus:ring-0 py-3 px-0 transition-colors text-lg rounded-none",
+      "label": "text-xs text-neutral-400 uppercase tracking-widest mb-1 block"
+    },
+    "card": {
+      "style": "bg-neutral-900/50 backdrop-blur-md border border-white/10 p-8 rounded-xl shadow-2xl"
+    }
+  },
+  "micro_interactions": {
+    "hover_effects": "Buttons should glow or shift slightly on hover. Links should have a sliding underline.",
+    "focus_states": "Inputs should have a glowing bottom border (cyan or purple) on focus.",
+    "loading_states": "Use a geometric spinner or a progress bar that fills with a neon gradient.",
+    "transitions": "All color/opacity changes must be smooth (duration-300 ease-out)."
+  },
+  "universal_guidelines": [
+    "Do NOT use default shadcn rounded corners (rounded-xl). Use 'rounded-md' or 'rounded-none' for a sharper, tech feel.",
+    "Ensure all text has sufficient contrast. Use 'text-neutral-300' for muted text, never lower.",
+    "Use 'lucide-react' icons with stroke-width={1.5} for a sleek look.",
+    "Add 'data-testid' to all interactive elements.",
+    "Avoid 'Inter' font. Use 'Rajdhani' for headers and 'Outfit' for body.",
+    "For the 'Remember Me' checkbox, customize the shadcn checkbox to be square and neon-active.",
+    "The Right Panel image (Torus) should have a slow 'scale-110' animation over 20s to create a breathing effect."
+  ],
+  "accessibility": {
+    "contrast": "Ensure neon colors are used as accents, not main text. Main text must be white or off-white.",
+    "keyboard_nav": "Focus rings must be visible (use ring-cyan-500/50).",
+    "motion": "Respect prefers-reduced-motion."
+  },
+  "implementation_steps": [
+    "Step 1: Install fonts (Rajdhani, Outfit) via Google Fonts.",
+    "Step 2: Configure Tailwind colors (neon-cyan, deep-void).",
+    "Step 3: Build the 'AuthLayout' component (Split Screen wrapper).",
+    "Step 4: Create 'FuturisticInput' and 'CyberButton' components.",
+    "Step 5: Implement Login, Register, Forgot Password pages using the new components."
+  ]
+}
